@@ -1,0 +1,74 @@
+*{
+
+margin:0; padding:0;
+	
+}
+
+body{
+	background: rgba(255, 255, 255, 1);
+}
+header{
+	font-size:6pt;
+	height:60px;
+	line-height:60px;
+	font-family: 'Diplomata', cursive;
+	text-align: center;
+	color:white;
+	background-color: rgba(0, 0, 25, 1);
+	border: 3px solid rgba(0, 0, 47, 1);
+	border-radius: 12px;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.button1 {
+	font-family: 'Peralta', cursive;
+    background-color: #008CBA;
+    border: none;
+    border-radius: 12px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.button2{
+	font-family: 'Peralta', cursive;
+	 background-color: #008CBA;
+    border: none;
+    border-radius: 12px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+	float: right;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.button1:active{
+	cursor:progress;
+	background: #bcaaa4;
+	color: black;
+}
+
+.button2:active{
+	cursor:progress;
+	background: #bcaaa4;
+	color: black;
+}
+footer{
+	font-family: 'Delius', cursive;
+	text-align: center;
+	background-color: black;
+	color: white;
+	text-shadow: 1px 1px  gray;
+}
+
+

@@ -1,0 +1,25 @@
+/* 
+font-family: 'Diplomata', cursive;
+font-family: 'Faster One', cursive;
+font-family: 'Delius', cursive;
+font-family: 'Peralta', cursive;
+font-family: 'Ruluko', sans-serif; Texto do documento.
+ */ 
+
+#cabeca{
+	font-family: 'Diplomata', cursive;
+	
+}
+p{
+	font-family: 'Ruluko', sans-serif;
+	text-align: justify;
+}
+
+
+}
+#rodape{
+	font-family: 'Diplomata', cursive;
+	
+}
+
+

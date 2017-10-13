@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+
+  <meta name="author" content="Fabian Cardoso Litaiff">
+  <meta name="viewport" content="width=device-width; initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css?family=Delius|Diplomata|Faster+One|Peralta|Ruluko" rel="stylesheet">
+	<script src="jquery.js"></script>
+ 	<script src = "jquery.jqplot.min.js"> </script>
+ 	<script src = "jqplot.canvasTextRenderer.min.js"> </script>
+ 	<script src="jqplot.canvasAxisLabelRenderer.min.js"></script>
+	<link rel = "stylesheet" = "text / css" href = "jquery.jqplot.min.css" />
+ 	<link rel = "stylesheet" = "text / css" href = "grafico01.css"/>
+
+</head>
+
+<body>
+  <div>
+    <header>
+       <h1>Gráficos dos MRU e MRUV</h1>
+	</header>
+
+<div id="home">
+	<input type="button" class="button1" onclick="window.location.href='../index.html'" value="Home" />
+
+	<input type="button" class="button2" onclick="../grf01.html" value="Voltar" />
+</div>
+
+
+
+
+ <div>
+
+
+
+ <script LANGUAGE="JavaScript" TYPE="text/javascript">
+
+ alert ("Digite valores inteiros, positivos ou negativos, para as grandezas físicas indicadas.")
+var A=prompt ("Informe o valor da aceleração em metros por segundo ao quadrado.");
+var B=prompt ("Informe o valor da velocidade inicial em metros por segundo.");
+var C=prompt ("Informe o valor da posição inicial em metros.");
+alert("Você digitou  que a aceleração é " +A+ "m/s²");
+alert("Você digitou que a velocidade inicial é " +B+ "m/s");
+alert("Você digitou que a posição inicial é " +C+ "m");
+
+$(document).ready(function(){
+  var cosPoints = [];
+  for (var i=0; i<6; i+=0.05){
+     cosPoints.push([i, (+C)+(+B)*(i)+0.5*(+A)*(i*i)]);
+  }
+  var plot1 = $.jqplot('grfc01', [cosPoints], {
+      series:[{showMarker:false}],
+      title: 'Posição vs. Tempo',
+      axes:{
+        xaxis:{
+        	min:0,max:7,
+          label:'Tempo (s)',
+          labelRenderer: $.jqplot.CanvasAxisLabelRenderer
+        },
+        yaxis:{
+          label:'Posição (m)',
+          labelRenderer: $.jqplot.CanvasAxisLabelRenderer
+        }
+      }
+  });
+});
+
+
+
+
+
+
+
+$(document).ready(function(){
+  var sinPoints = [];
+  for (var i=0; i<6; i+=0.05){
+     sinPoints.push([i, (+B)+(+A)*(i)]);
+  }
+  var plot1 = $.jqplot('grfc02', [sinPoints], {
+  	title: 'Velocidade vs. Tempo',
+      series:[{showMarker:false}],
+      axes:{
+        xaxis:{
+        	min:0,max:7,
+          label:'Tempo (s)',
+          labelRenderer: $.jqplot.CanvasAxisLabelRenderer
+        },
+        yaxis:{
+          label:'Velocidade (m/s)',
+          labelRenderer: $.jqplot.CanvasAxisLabelRenderer
+        }
+      }
+  });
+});
+
+
+
+
+
+$(document).ready(function(){
+
+
+  var tPoints = [];
+  for (var i=0; i<6; i+=0.05){
+
+     tPoints.push([i, (+A)]);
+  }
+  var plot1 = $.jqplot('grfc03', [tPoints], {
+      series:[{showMarker:false}],
+      title: 'Aceleração vs. Tempo',
+      axes:{
+        xaxis:{
+		  min:0,max:7,
+          label:'Tempo (s)',
+          labelRenderer: $.jqplot.CanvasAxisLabelRenderer
+        },
+        yaxis:{
+        	min:-Math.abs(+A)-2,max:Math.abs(+A)+2,
+          label:'Aceleração (m/s²)',
+          labelRenderer: $.jqplot.CanvasAxisLabelRenderer
+        }
+      }
+  });
+});
+
+</script>
+
+<div id="grfc01" style="height:400px;width:100%"></div>
+<div id="grfc02" style="height:400px;width:100%"></div>
+<div id="grfc03" style="height:400px;width:100%"></div>
+   </div>
+
+    <footer id="rodape">
+     <p>&copy; Copyright  by Fabian Cardoso Litaiff</p>
+    </footer>
+  </div>
+</body>
+</html>
